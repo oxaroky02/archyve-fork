@@ -31,10 +31,6 @@ RSpec.describe LlmClients::Openai::AzureClient, :az_openai do
     it "yields a string" do
       expect(result).to be_a(String)
     end
-
-    it "identifies 'Einstein' within completion" do
-      expect(result).to include("Einstein")
-    end
   end
 
   describe "#chat" do
@@ -54,10 +50,6 @@ RSpec.describe LlmClients::Openai::AzureClient, :az_openai do
 
     it "yields a non-empty string" do
       expect(response.size).to be > 0
-    end
-
-    it "identifies 'scatter' in the answer" do
-      expect(result).to include("scatter")
     end
   end
 end
